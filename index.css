@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 97vw;
+    background-color: #0b0927;
+}
+
+#database-website{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vw;
+    height: auto;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+.header{
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+    background-color: #292727;
+    color: #fff;
+    height: 60px;
+    align-items: center;
+    margin: 5px;
+}
+
+select{
+    background-color:#292727 ;
+    color: #fff;
+    border: none;
+    width:100px;
+    padding: 5px;
+    
+}
+select:focus{
+    outline: 0px;
+}
+
+option{
+    background-color: #292727;
+   
+}
+
+
+.main-item-area{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    width: 100%;
+    margin: 5px;
+      
+}
+.item-display{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3e3e3;
+    padding: 10px;
+    width: 100%;
+   
+}
+.questions-area{
+    display: flex;
+    justify-content:space-between;
+    background-color: #a59c9c;
+    align-items: center;
+    border-radius: 5px;
+    height: 50px;
+    padding: 5px 10px;
+    border: 1px solid #292727;
+    width: 70%;
+    
+}
+.categories{
+    display: flex;
+    align-items: center;
+    background-color: #292727;
+    height: 50px;
+    width: 25%;
+    padding: 5px 10px;
+    justify-content:flex-start;
+    color: white;
+    border-radius: 5px;
+}
+
+.answers{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    color:#fff;
+    flex-direction: row;
+    background-color: #292727;
+    height: 50px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.show-options{
+    color: white;
+    background-color: #292727;
+    width: 70px;
+    height: 30px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}

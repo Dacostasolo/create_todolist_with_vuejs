@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://unpkg.com/vue@next"></script>
+</head>
+
+<script type="text/x-template" id="database-component">
+    <div class="main-item-area">
+        <div class="item-display">
+            <div class="categories">{{categories}}</div>
+            <div class="questions-area" >
+                <span class="questions">{{questions}}</span>
+                <span class="show-options" @click = "$emit('showanswers')">Answers</span>
+            </div>
+        </div>
+
+        <div class="answers" v-if="show" >
+            <template v-for="answer in answers">
+                <div>
+                    <input type="radio" name="ans" id="ans">
+                    <label for="ans" >{{answer}}</label>
+                </div>
+                
+            </template>
+        </div>
+
+    </div>
+</script>
+
+<body>
+    <div id="database-website">
+       
+            <div class="header">
+                <span>SIMPLE QUIZE</span>
+                <div>
+                    <select >
+                        <option value="" selected>Sort Quest.</option>
+                        <option value="categories">Categories</option>
+                        <option value="question">Questions</option>
+                    </select>
+                </div>
+            </div>
+            <database-component v-for="data in dataset"
+                :categories="data.category"
+                :answers ="data.answer"
+                :entries = "dataset"
+                :questions = "data.question"
+                :show = "data.show"
+                @showanswers = "data.show=!data.show"
+            >
+            </database-component>
+        
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
